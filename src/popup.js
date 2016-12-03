@@ -16,9 +16,9 @@ function getSelectionText() {
 function textToScreech(text) {
     chrome.extension.getBackgroundPage().console.log(text);
 
-    for (var i=0, len=text.length; i<len; i++) {
-        chrome.extension.getBackgroundPage().console.log(text[i]);
-    }
+    // for (var i=0, len=text.length; i<len; i++) {
+    //     chrome.extension.getBackgroundPage().console.log(text[i]);
+    // }
 }
 
 document.addEventListener('DOMContentLoaded', function() {
