@@ -1,20 +1,27 @@
-{
+
   "manifest_version": 2,
 
-  "name": "Example Chrome Extension",
-  "description": "",
+  "name": "Text to Screech",
+  "description": "covert.Highlight text and click the extension's icon",
+  "author": "",
   "version": "0.0.1",
   "background": {
-    "scripts": ["/src/background.js"]
+    "scripts": ["background.min.js"]
   },
   "content_scripts": [
     {
-      "matches": ["*://google.com/*"],
-      "js": ["/lib/zepto.min.js", "/src/content.js"],
-      "all_frames": true
-    }
-  ],
-  "browser_action": { "default_popup": "/src/popup.html" },
-  "permissions": ["*://google.com/*"],
-  "content_security_policy": "script-src 'self' https://cdn.mxpnl.com; object-src 'self'"
+      "matches": ["http://*/*", "https://*/*"],
+      "js": [ "polyfill.min.js", "ext.min.js"],
+      "run_at": "document_end"
+    }],
+  "browser_action": {
+    "default_icon": "speech.png"
+  },
+  "icons": { "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png" },
+    "permissions": [
+      "activeTab",
+      "clipboardRead"
+    ]
 }
