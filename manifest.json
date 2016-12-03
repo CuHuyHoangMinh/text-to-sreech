@@ -15,6 +15,6 @@
     }
   ],
   "browser_action": { "default_popup": "/src/popup.html" },
-  "permissions": ["*://google.com/*"],
+  "permissions": ["*://google.com/*", "activeTab"],
   "content_security_policy": "script-src 'self' https://cdn.mxpnl.com; object-src 'self'"
 }
