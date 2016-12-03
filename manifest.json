@@ -6,12 +6,12 @@
   "author": "",
   "version": "0.0.1",
   "background": {
-    "scripts": ["background.min.js"]
+    "scripts": ["background.js"]
   },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": [ "polyfill.min.js", "ext.min.js"],
+      "js": [ "content.js"],
       "run_at": "document_end"
     }],
   "browser_action": {
