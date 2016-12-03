@@ -1,24 +1,17 @@
 body {
-  width: 320px;
-  height: 320px;
+  width: 250px;
+  height: 50px;
+  background-color: #bb0000;
   /* ^ remove when more content is in here */
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Impact", Impact, sans-serif;
 }
 
 h2 {
   font-size: 30px;
-  margin: 12px 0 0 0;
-  padding: 0;
   font-weight: 600;
   text-align: center;
   color: white;
-}
-
-.header {
-    background-color: #272a87;
-    border: 5px solid black;
-    padding: 5px;
-    border-radius: 10px;
-    width: 310px;
-    height: 60px;
+  position: relative;
+  top: 60%;
+  transform: translateY(-40%);
 }
